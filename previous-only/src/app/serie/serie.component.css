@@ -1,0 +1,22 @@
+
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: 90%;
+}
+mat-tab-group{
+  background-color: white;
+}
+mat-grid-tile {
+  color: black;
+  font-family: 'Playfair Display SC', serif;
+
+}
+
+.image-series-id{
+}
+
+.title-ser{
+  font-family: 'Bitter', serif;
+  text-align: center;
+}

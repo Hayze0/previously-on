@@ -1,0 +1,94 @@
+<div class="container">
+  <h1 class="title-ser"> {{ shows?.title }} </h1>
+
+  <mat-grid-list cols="1" rowHeight="350px">
+  <mat-grid-tile>
+    <img class="image-series-id" [src]="shows?.images.show">
+
+  </mat-grid-tile>
+</mat-grid-list>
+  <mat-tab-group  mat-align-tabs="start" (selectedTabChange)="getId($event.index)">
+    <mat-tab  label="Information">
+      <mat-grid-list cols="2" rowHeight="450px">
+      <mat-grid-tile>
+         <mat-list>
+           <h3 mat-subheader>Folders</h3>
+
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Seasons: {{ shows?.seasons }} </h4>
+           </mat-list-item>
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Episodes: {{ shows?.episodes }}</h4>
+           </mat-list-item>
+
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Time Episode: {{ shows?.length }} minutes</h4>
+           </mat-list-item>
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Genres: {{ shows?.genres }}</h4>
+           </mat-list-item>
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Note: {{shows?.notes.mean}}/5</h4>
+           </mat-list-item>
+
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Creation: {{shows?.creation}}</h4>
+           </mat-list-item>
+           <mat-list-item>
+             <mat-icon mat-list-icon>movie</mat-icon>
+             <h4 mat-line>Production: {{shows?.network}}</h4>
+           </mat-list-item>
+         </mat-list>
+      </mat-grid-tile>
+      <mat-grid-tile>
+        <div class="col-12">
+          <h2>Synopsis:</h2>
+          <p>{{ shows?.description }}</p>
+        </div>
+      </mat-grid-tile>
+      </mat-grid-list>
+    </mat-tab>
+    <div *ngFor="let data of season">
+    <mat-tab   mat-align-tabs="end" (click)="getId(data.number)"    label="Saison {{ data.number }}">
+
+      <mat-accordion *ngFor="let data of episode">
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Episode: {{ data.code }}
+            </mat-panel-title>
+            <mat-panel-description>
+              {{data.title}}
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <mat-grid-list cols="2" rowHeight="350px">
+            <mat-grid-tile>
+              <div class="col-12">
+                {{data.title}}
+                <video width="500px" height="405" controls  [poster]="shows.images.show">
+                  <source src="http://www.supportduweb.com/page/media/videoTag/BigBuckBunny.mp4" type="video/mp4">
+                  <source src="http://www.supportduweb.com/page/media/videoTag/BigBuckBunny.ogg" type="video/ogg">
+                  <source src="http://www.supportduweb.com/page/media/videoTag/BigBuckBunny.webm" type="video/webm">
+                </video>
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div class="col-12">
+              <h1>Descritpion</h1>
+          <p>{{data.description}}</p>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+
+        </mat-expansion-panel>
+        </mat-accordion>
+    </mat-tab>
+    </div>
+  </mat-tab-group>
+</div>

@@ -1,0 +1,26 @@
+<div class="container cont">
+  <div class="row">
+    <div class="col-10 coli">
+      <h1 class="title-page">Previoulsy On</h1>
+
+      <form (ngSubmit)="connection()">
+      <div class="example-container">
+<h3 class="title-formy">Connection</h3>
+      <mat-form-field>
+        <input matInput placeholder="Enter your email" name="email" [(ngModel)]="email" [formControl]="emails" required>
+        <mat-error *ngIf="emails.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput placeholder="Enter your password" name="password" [(ngModel)]="password" [type]="hide ? 'password' : 'text'">
+        <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      </mat-form-field>
+        <div class="example-button-row">
+          <button  mat-raised-button color="primary">Connectez-vous</button>
+        </div>
+      </div>
+      </form>
+
+
+    </div>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <h1 class="title-series">Vos séries en cours</h1>
+  <mat-grid-list cols="3" rowHeight="2:1">
+  <mat-grid-tile *ngFor="let data of membersInfo" >
+    <div  class="col-10 coli-series">
+      <h3 class="title-series">{{data.title}}</h3>
+      <a routerLink="serie/{{data.id}}" routerLinkActive="active-link">
+        <img class="img-serie" [src]="data.images.show" alt="">
+
+      </a>
+      <button class="button-add" mat-fab color="warn">&#177;</button>
+    </div>
+  </mat-grid-tile>
+</mat-grid-list>
+</div>

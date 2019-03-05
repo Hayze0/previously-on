@@ -1,0 +1,47 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 27%;
+  border: black solid 1px;
+  padding: 7%;
+
+  box-shadow: 5px 10px 8px #888888;
+  margin-top: 4%;
+}
+
+.example-container > * {
+  width: 100%;
+}
+
+.example-right-align {
+  text-align: right;
+}
+.cont{
+  background-color: white;
+  height: 70%;
+}
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.example-right-align {
+  -moz-appearance: textfield;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-left: 75%;
+}
+.title-formy{
+  text-align: center;
+  font-family: 'Arapey', serif;
+
+
+}
+.title-page{
+  font-family: 'Arapey', serif;
+  text-align: center;
+  margin-left: 30%;
+}

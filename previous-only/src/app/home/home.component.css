@@ -1,0 +1,44 @@
+mat-grid-tile {
+
+
+}
+.img-serie{
+  transition: all .2s ease-in-out;
+  width: 105%;
+
+
+}
+
+
+.img-serie:hover{
+  transform: scale(1.1);
+  border: solid white 3px;
+  border-radius: 35px;
+  margin-top: 1%;
+  opacity: 0.4;
+}
+.button-add{
+  position: fixed;
+}
+.container-fluid{
+  background-color: black;
+}
+
+.title-series{
+  text-align: center;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: ghostwhite;
+}
+
+.button-series{
+  margin-left: 17%;
+
+}
+
+.button-add-rm
+{
+  font-size: 75px;
+  margin-inside: 12%;
+
+}
+
